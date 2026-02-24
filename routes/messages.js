@@ -54,7 +54,7 @@ router.post("/reply/:id", async(req, res)=>{
         const {user_id, name, reply_old_msg, replyMessage} = req.body;
        const {data, error} = await db.from("six_messages")
         .insert({
-           user_id,
+            user_id,
             name,
             reply_msg_id:id,
             reply_old_msg,
