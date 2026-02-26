@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const db = require("../BackEnd/One/db"); 
+const db = require("./One/db"); 
 require("dotenv").config();
 
 const app = express();
