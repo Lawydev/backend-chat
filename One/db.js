@@ -1,10 +1,11 @@
-const mysql = require("mysql2/promise");
+const { createClient } = require("@supabase/supabase-js/dist/index.cjs")
+require("dotenv").config();
 
-const db = mysql.createPool({
-    host:"localhost",
-    user:"root",
-    password:"",
-    database:"lawal_db"
-})
 
-module.exports =db;
+const db = createClient(
+    process.env.SUPABASE_URL,
+    process.env.SUPABASE_ANON_KEY
+)
+
+
+module.exports = db;
